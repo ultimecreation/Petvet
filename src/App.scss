@@ -152,15 +152,29 @@ $lightgrey: #dad9da;
 #testimonial {
   margin-top: 1rem;
   padding: 1rem;
-  h1 {
-    font-size: 1.3rem;
-    margin: 1rem 0;
+  border: none;
+  .slide-active {
+    animation: slideStart 1s ease-in;
+    h1 {
+      font-size: 1.3rem;
+      margin: 1rem 0;
+    }
+    p {
+      color: $grey;
+    }
   }
-  p {
-    color: $grey;
+  .slide {
+    display: none;
   }
 }
-
+@keyframes slideStart {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 ////////////////
 // BLOG
 ////////////////
@@ -229,6 +243,7 @@ $lightgrey: #dad9da;
       line-height: 3rem;
       margin: 0.5rem 0;
       border: 1px solid $grey;
+      font-size: 1.5rem;
     }
     input[type="submit"] {
       margin-right: auto;
@@ -237,6 +252,7 @@ $lightgrey: #dad9da;
       color: white;
       margin-top: 1rem;
       width: 200px;
+      font-size: 1rem;
     }
   }
 }
