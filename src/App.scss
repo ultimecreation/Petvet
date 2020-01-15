@@ -486,11 +486,12 @@ $lightgrey: #dad9da;
   // BLOG
   ////////////////
   #blog {
+    max-width: 1860px;
+    margin: 0 auto;
     position: relative;
     display: block;
     background: url("/img/femme-et-chat.png") center center / cover;
 
-    width: 100vw;
     height: 890px;
     .overlay {
       position: absolute;
