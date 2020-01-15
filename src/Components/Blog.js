@@ -21,7 +21,7 @@ const Blog = () => {
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
             </p>
-            <a href="">READ MORE</a>
+            <a href="!#">READ MORE</a>
           </div>
         </div>
       </div>

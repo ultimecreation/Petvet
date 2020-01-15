@@ -10,11 +10,11 @@ import Adoption from "./Components/Adoption";
 import Contact from "./Components/Contact";
 import Map from "./Components/Map";
 import Footer from "./Components/Footer";
-
 function App() {
   return (
     <div className="App">
       <Navbar />
+
       <Home />
       <About />
       <Testimonial />

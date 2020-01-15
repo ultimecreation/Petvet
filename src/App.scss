@@ -7,7 +7,7 @@
 }
 body {
   max-width: 1860px;
-
+  margin: 0 auto;
   overflow-x: hidden;
 }
 
@@ -22,33 +22,66 @@ $lightgrey: #dad9da;
 // NAVBAR
 ////////////////
 .navbar {
+  max-width: 1860px;
+  margin: 0 auto;
+  padding: 10px;
+  position: fixed;
+  z-index: 1;
   display: flex;
+  width: 100%;
   justify-content: space-between;
   align-items: baseline;
-  padding: 10px;
-  h4 {
-  }
+
+  background: white;
 
   .menu {
-    position: relative;
-    ul {
+    img {
+      margin-right: 0;
+    }
+    nav {
       display: none;
-      margin-top: 10px;
-      text-align: center;
-      position: absolute;
-      right: 0;
 
-      width: calc(100vw - 20px);
-      background: pink;
-      list-style: none;
+      &.open {
+        display: block;
+        margin-top: 10px;
+        text-align: center;
+        position: absolute;
+        right: 0;
+        width: 100%;
+        background: rgba($color: #000000, $alpha: 0.95);
+        animation: displayNav 1s ease-in-out forwards;
+        a {
+          display: block;
+          font-size: 2rem;
+          text-decoration: none;
+          padding: 1rem;
+          color: $lightgrey;
+          &.active-navlink {
+            color: red;
+            font-weight: bold;
+          }
+        }
+      }
     }
   }
 }
+@keyframes displayNav {
+  from {
+    width: 0;
+    height: 100vh;
+  }
+  to {
+    width: 100%;
+    height: 100vh;
+  }
+}
+
 ////////////////
 // HOME
 ////////////////
 #home {
   position: relative;
+  padding-top: 40px;
   img {
     width: 100%;
     height: 100%;
