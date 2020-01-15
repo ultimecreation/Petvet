@@ -153,15 +153,15 @@ $lightgrey: #dad9da;
   margin-top: 1rem;
   padding: 1rem;
   border: none;
+  h1 {
+    font-size: 1.3rem;
+    margin: 1rem 0;
+  }
+  p {
+    color: $grey;
+  }
   .slide-active {
-    animation: slideStart 1s ease-in;
-    h1 {
-      font-size: 1.3rem;
-      margin: 1rem 0;
-    }
-    p {
-      color: $grey;
-    }
+    animation: slideStart 1.9s ease-out;
   }
   .slide {
     display: none;
@@ -169,10 +169,12 @@ $lightgrey: #dad9da;
 }
 @keyframes slideStart {
   from {
-    opacity: 0;
+    opacity: 0.1;
+    height: 0;
   }
   to {
     opacity: 1;
+    height: 100%;
   }
 }
 ////////////////
