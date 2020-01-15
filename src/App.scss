@@ -10,6 +10,7 @@ body {
 
   overflow-x: hidden;
 }
+
 ////////////////
 // COLORS
 ////////////////
@@ -92,7 +93,7 @@ $lightgrey: #dad9da;
       font-size: 0.6rem;
     }
     h1 {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       margin: 1rem 0;
     }
     p {
@@ -119,7 +120,7 @@ $lightgrey: #dad9da;
   margin-top: 1rem;
   padding: 1rem;
   h1 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin: 1rem 0;
   }
   p {
@@ -140,12 +141,13 @@ $lightgrey: #dad9da;
 #services {
   margin-top: 1rem;
   padding: 1rem;
-  h1 {
-    font-size: 1.2rem;
-    margin: 1rem 0;
-  }
+
   .services__container {
-    .services__card {
+    h1 {
+      font-size: 1.3rem;
+      margin: 1rem 0;
+    }
+    .services__cards {
       h6 {
         text-align: center;
         margin: 1rem 0;
@@ -164,7 +166,7 @@ $lightgrey: #dad9da;
 }
 
 ////////////////
-// SERVICES
+// ADOPTION
 ////////////////
 #adoption {
   display: none;
@@ -177,7 +179,7 @@ $lightgrey: #dad9da;
   margin-top: 1rem;
   padding: 1rem;
   h1 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin: 1rem 0;
   }
   p {
@@ -191,7 +193,7 @@ $lightgrey: #dad9da;
     input:not([type="submit"]),
     textarea {
       width: 100%;
-      line-height: 1.2rem;
+      line-height: 3rem;
       margin: 0.5rem 0;
       border: 1px solid $grey;
     }
@@ -201,6 +203,7 @@ $lightgrey: #dad9da;
       background: $black;
       color: white;
       margin-top: 1rem;
+      width: 200px;
     }
   }
 }
@@ -272,45 +275,89 @@ $lightgrey: #dad9da;
   ////////////////
   #about {
     .about-text {
+      margin-top: 5rem;
       padding: 1rem 2rem;
+      h1 {
+        font-size: 2rem;
+      }
     }
   }
   ////////////////
   // TESTIMONIAL
   ////////////////
   #testimonial {
+    margin-top: 5rem;
     padding: 1rem 2rem;
+    h1 {
+      font-size: 2rem;
+    }
+    p {
+      color: $grey;
+      margin-top: 3rem;
+      margin-bottom: 3.5rem;
+    }
   }
 
   ////////////////
   // SERVICES
   ////////////////
   #services {
+    margin-top: 5rem;
     padding: 1rem 2rem;
     .services__container {
-      display: flex;
+      h1 {
+        font-size: 2rem;
+      }
+      .services__cards {
+        display: flex;
+        justify-content: center;
 
-      .services__card {
-        margin: 0 1rem;
-        h6 {
-          text-align: left;
+        .services__cards__single {
+          margin: 0 1rem;
+
+          h6 {
+            text-align: left;
+
+            margin-bottom: 48px;
+            font-style: 1.1rem;
+          }
+          &:nth-of-type(1) {
+            margin-left: 0;
+          }
         }
       }
     }
   }
-
   ////////////////
   // CONTACT
   ////////////////
   #contact {
+    margin-top: 5rem;
     padding: 1rem 2rem;
+    h1 {
+      font-size: 2rem;
+    }
     .text-and-form {
       display: flex;
       align-items: baseline;
+      justify-content: space-between;
       p {
         max-width: 25%;
         margin-right: 4rem;
+        font-size: 1.1rem;
+        position: relative;
+        top: -1rem;
       }
+    }
+  }
+  ////////////////
+  // MAP
+  ////////////////
+  #map {
+    margin-top: 5rem;
+    margin-bottom: 0;
+    iframe {
+      height: 610px;
     }
   }
 }
@@ -350,17 +397,18 @@ $lightgrey: #dad9da;
     margin-top: 140px;
     display: flex;
     img {
+      width: 70%;
       max-width: 1016px;
     }
     .about-text {
       padding: 1rem;
       margin: auto auto 6rem auto;
-      width: 25%;
+      max-width: 25%;
       small {
         font-size: 0.6rem;
       }
       h1 {
-        font-size: 1.2rem;
+        font-size: 2rem;
         margin-top: 2rem;
       }
       p {
@@ -390,11 +438,14 @@ $lightgrey: #dad9da;
     max-width: 780px;
     text-align: center;
     h1 {
-      font-size: 1.2rem;
+      font-size: 2rem;
       margin: 1rem 0;
     }
     p {
       color: $grey;
+
+      margin-top: 3rem;
+      margin-bottom: 3.5rem;
     }
   }
 
@@ -466,10 +517,12 @@ $lightgrey: #dad9da;
           }
           small,
           a {
+            display: inline-block;
+            margin-top: 1.6rem;
             font-size: 0.6rem;
           }
           a {
-            color: $grey;
+            color: white;
           }
         }
       }
@@ -482,6 +535,9 @@ $lightgrey: #dad9da;
   #services {
     max-width: 1040px;
     margin: 380px auto;
+    .services__container h1 {
+      font-size: 2rem;
+    }
     .services__cards {
       margin-top: 86px;
 
@@ -495,7 +551,7 @@ $lightgrey: #dad9da;
           text-align: left;
           margin-top: 86px;
           margin-bottom: 48px;
-          font-style: 1rem;
+          font-size: 1.1rem;
         }
         &:nth-of-type(1) {
           margin-left: 0;
@@ -511,7 +567,39 @@ $lightgrey: #dad9da;
   // ADOPTION
   ////////////////
   #adoption {
+    position: relative;
     display: block;
+    .adoption-card {
+      position: absolute;
+      width: 630px;
+      right: 0;
+      bottom: 50%;
+      transform: translateY(50%);
+      small,
+      button {
+        font-size: 0.6rem;
+      }
+      h1 {
+        font-size: 2rem;
+        margin-top: 2rem;
+      }
+      p {
+        margin-top: 2rem;
+      }
+      button {
+        width: 200px;
+        height: 60px;
+        background: $black;
+        color: white;
+        margin-top: 2rem;
+        border: none;
+        &:hover {
+          background: white;
+          color: $black;
+          border: 1px solid $black;
+        }
+      }
+    }
   }
 
   ////////////////
@@ -519,32 +607,80 @@ $lightgrey: #dad9da;
   ////////////////
   #contact {
     max-width: 1040px;
+
     margin: 210px auto 190px auto;
     h1 {
-      font-size: 1.2rem;
+      font-size: 2rem;
       margin: 1rem 0;
     }
-    p {
-      color: $grey;
-    }
-    form {
-      margin-top: 1rem;
-
-      text-align: right;
-
-      input:not([type="submit"]),
-      textarea {
-        width: 100%;
-        line-height: 1.2rem;
-        margin: 0.5rem 0;
-        border: 1px solid $grey;
+    .text-and-form {
+      display: flex;
+      align-items: baseline;
+      p {
+        color: $grey;
+        max-width: 350px;
       }
-      input[type="submit"] {
-        margin-right: auto;
-        padding: 0.5rem 1rem;
-        background: $black;
-        color: white;
+      form {
         margin-top: 1rem;
+        margin-left: 76px;
+        text-align: right;
+        input:not([type="submit"]) {
+          display: inline;
+          width: calc(50% - 0.75rem);
+          &:nth-of-type(2) {
+            margin-left: 1.5rem;
+          }
+        }
+
+        textarea {
+          width: 100%;
+          line-height: 3rem;
+          margin: 0.5rem 0;
+          border: 1px solid $grey;
+        }
+        input[type="submit"] {
+          margin-right: auto;
+          padding: 0.5rem 1rem;
+          background: $black;
+          color: white;
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+
+  #map {
+    margin-top: 5rem;
+    margin-bottom: 0;
+    iframe {
+      height: 610px;
+    }
+  }
+  ////////////////
+  // FOOTER
+  ////////////////
+  .footer {
+    padding: 4rem 0;
+    background: $black;
+    color: white;
+
+    display: flex;
+    justify-content: space-around;
+    .footer-text {
+      padding: 1rem 0;
+
+      flex-direction: column;
+      p {
+        margin-top: -1rem;
+      }
+      &:last-child h6 {
+        text-align: left;
+      }
+      &:last-child p {
+        max-width: 150px;
+        text-align: left;
+        position: relative;
+        bottom: -1rem;
       }
     }
   }
