@@ -11,7 +11,7 @@ const Testimonial = () => {
   };
 
   React.useEffect(() => {
-    setTimeout(gotoNext, 3000);
+    setTimeout(gotoNext, 30000);
   });
 
   return (
