@@ -12,15 +12,18 @@ export default class Contact extends Component {
             it!
           </p>
           <form>
-            <label htmlFor="fullname">
-              <input type="text" name="fullName" id="fullname" />
-            </label>
-            <label htmlFor="email">
-              <input type="email" name="email" id="email" />
-            </label>
-            <label htmlFor="message">
-              <textarea name="message" cols="30" rows="5"></textarea>
-            </label>
+            <div>
+              <label htmlFor="fullName">
+                <input type="text" name="fullName" id="fullName" />
+              </label>
+
+              <label htmlFor="email">
+                <input type="email" name="email" id="email" />
+              </label>
+            </div>
+
+            <label htmlFor="message"> </label>
+            <textarea name="message" cols="30" rows="5" id="message"></textarea>
 
             <input type="submit" value="SUBMIT" />
           </form>

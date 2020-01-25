@@ -395,6 +395,14 @@ $lightgrey: #dad9da;
       display: flex;
       align-items: baseline;
       justify-content: space-between;
+      input:not([type="submit"]),
+      textarea {
+        line-height: 3rem;
+        margin: 0.5rem 0;
+        border: 1px solid $grey;
+        font-size: 1.5rem;
+      }
+
       p {
         max-width: 25%;
         margin-right: 4rem;
@@ -679,11 +687,18 @@ $lightgrey: #dad9da;
         margin-top: 1rem;
         margin-left: 76px;
         text-align: right;
-        input:not([type="submit"]) {
-          display: inline;
-          width: calc(50% - 0.75rem);
-          &:nth-of-type(2) {
-            margin-left: 1.5rem;
+        input:not([type="submit"]),
+        textarea {
+        line-height: 3rem;
+          margin: 0.5rem 0;
+          border: 1px solid $grey;
+          font-size: 1.5rem;
+        }
+        div {
+          display: flex;
+          justify-content: space-between;
+          label {
+            width: 48%;
           }
         }
 
